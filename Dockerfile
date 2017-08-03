@@ -29,10 +29,6 @@ RUN chmod +x /docker-entrypoint.sh && \
     chown -R postgres:postgres $PGDATA /var/log/supervisor/postgres && \
     chmod +x /image-pre-start.d/*.sh
 
-
-# ADD postgresql.conf.dockerized /usr/local/share/postgresql
-# ADD pg_hba.conf.dockerized /usr/local/share/postgresql
-
 EXPOSE 5432
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
